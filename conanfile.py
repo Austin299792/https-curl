@@ -3,7 +3,7 @@ from conans import ConanFile, CMake, tools
 
 class HttpscurlConan(ConanFile):
     name = "https-curl"
-    version = "2.0"
+    version = "2.1"
     license = "<Put the package license here>"
     author = "<Put your name here> <And your email here>"
     url = "<Package recipe repository url here, for issues about the package>"
@@ -36,12 +36,12 @@ class HttpscurlConan(ConanFile):
 
     def package(self):
         self.copy("*.h", dst="include", src="https-curl")
-        self.copy("*https-curl.lib", dst="lib", keep_path=False)
+        self.copy("*https.lib", dst="lib", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
         self.copy("*.dylib", dst="lib", keep_path=False)
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["https-curl"]
+        self.cpp_info.libs = ["https"]
 
