@@ -36,6 +36,7 @@ class HttpscurlConan(ConanFile):
         # self.run("cmake --build . %s" % cmake.build_config)
 
     def package(self):
+        self.copy("https", dst="bin", keep_path=False)
         self.copy("*.h", dst="include", src="https-curl")
         self.copy("*https.lib", dst="lib", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
