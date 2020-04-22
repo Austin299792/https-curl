@@ -3,7 +3,7 @@ from conans import ConanFile, CMake, tools
 
 class HttpscurlConan(ConanFile):
     name = "https-curl"
-    version = "2.1"
+    version = "2.2"
     license = "<Put the package license here>"
     author = "<Put your name here> <And your email here>"
     url = "<Package recipe repository url here, for issues about the package>"
