@@ -12,6 +12,7 @@ class HttpscurlConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
     default_options = {"shared": False}
+    requires = "libcurl/7.69.1"
     generators = "cmake"
 
     def source(self):
